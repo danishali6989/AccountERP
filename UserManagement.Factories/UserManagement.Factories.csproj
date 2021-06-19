@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UserManagement.Dtos\UserManagement.Dtos.csproj" />
+    <ProjectReference Include="..\UserManagement.Entities\UserManagement.Entities.csproj" />
+    <ProjectReference Include="..\UserManagement.Models\UserManagement.Models.csproj" />
+  </ItemGroup>
+
+</Project>
