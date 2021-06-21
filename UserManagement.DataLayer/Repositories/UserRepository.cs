@@ -365,8 +365,7 @@ namespace UserManagement.DataLayer.Repositories
              var filterKey = model.Search.Value;
 
              var linqStmt = (from s in _dataContext.User
-                             join l in _dataContext.LoginModule on s.Id equals l.UserId into sl
-                             from l in sl.DefaultIfEmpty()
+                             join l in _dataContext.LoginModule on s.Id equals l.UserId 
                              where s.Status != Constants.RecordStatus.Deleted && (model.filterKey == null || EF.Functions.Like(s.Usr_FName, "%" + model.filterKey + "%")
                              || EF.Functions.Like(s.Usr_LName, "%" + model.filterKey + "%"))
                              select new UserDetailDto
