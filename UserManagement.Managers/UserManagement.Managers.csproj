@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UserManagement.DataLayer\UserManagement.DataLayer.csproj" />
     <ProjectReference Include="..\UserManagement.Dtos\UserManagement.Dtos.csproj" />
+    <ProjectReference Include="..\UserManagement.Entities\UserManagement.Entities.csproj" />
     <ProjectReference Include="..\UserManagement.Factories\UserManagement.Factories.csproj" />
     <ProjectReference Include="..\UserManagement.Infrastructure\UserManagement.Infrastructure.csproj" />
   </ItemGroup>

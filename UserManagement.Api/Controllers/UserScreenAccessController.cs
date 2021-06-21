@@ -28,7 +28,7 @@ namespace UserManagement.Api.Controllers
 
         [HttpPost]
         [Route("AddScreenAccess")]
-        public async Task<IActionResult> AddQualifyAnswer(List<ScreenAccessModel> model)
+        public async Task<IActionResult> AddQualifyAnswer(ScreenAccessModel model)
         {
             try
             {

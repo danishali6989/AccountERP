@@ -31,11 +31,12 @@ namespace UserManagement.Managers
             _unitOfWork = unitOfWork;
         }
 
-        public async Task AddUserScreenAccessAsync(List<ScreenAccessModel> model)
+        public async Task AddUserScreenAccessAsync(ScreenAccessModel model)
         {
-            await _repository.DeleteAsyncUserScreenAccess(model[0].UserRoleId);
+            await _repository.DeleteAsyncUserScreenAccess(model.UserRoleId);
             await _unitOfWork.SaveChangesAsync();
             List<UserScreenAccess> item = new List<UserScreenAccess>();
+           
             UserScreenAccessFactory.CreateUserScreenAccess(model, item);
             await _repository.AddUserScreenAccessAsync(item);
             await _unitOfWork.SaveChangesAsync();
